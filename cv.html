@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #1a1a2e, #16213e);
+      color: #fff;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    .header {
+      position: relative;
+      padding: 2rem;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      margin-bottom: 2rem;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .profile-img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 3px solid #4CAF50;
+      object-fit: cover;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+
+    .stat-card {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 1.5rem;
+      border-radius: 15px;
+      text-align: center;
+      transition: transform 0.3s;
+      cursor: pointer;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .stat-card:hover {
+      transform: translateY(-5px);
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .skill-bars {
+      margin: 2rem 0;
+    }
+
+    .skill-bar {
+      margin: 1rem 0;
+    }
+
+    .skill-name {
+      margin-bottom: 0.5rem;
+    }
+
+    .progress {
+      height: 8px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .progress-bar {
+      height: 100%;
+      background: linear-gradient(90deg, #4CAF50, #81C784);
+      animation: fillBar 1.5s ease-out;
+    }
+
+    @keyframes fillBar {
+      from { width: 0; }
+      to { width: var(--width); }
+    }
+
+    .achievements {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+
+    .achievement-card {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 1.5rem;
+      border-radius: 15px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .glow {
+      animation: glow 2s infinite alternate;
+    }
+
+    @keyframes glow {
+      from {
+        box-shadow: 0 0 5px #4CAF50,
+                    0 0 10px #4CAF50,
+                    0 0 15px #4CAF50;
+      }
+      to {
+        box-shadow: 0 0 10px #4CAF50,
+                    0 0 20px #4CAF50,
+                    0 0 30px #4CAF50;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <img src="/api/placeholder/150/150" alt="Player Profile" class="profile-img">
+      <h1>ALEX GALAXY</h1>
+      <p>Professional Football Player | Position: Advanced Midfielder</p>
+      <p>Age: 23 | Height: 1.82m | Weight: 76kg</p>
+    </div>
+
+    <div class="stats-grid">
+      <div class="stat-card glow">
+        <h3>Matches Played</h3>
+        <h2>247</h2>
+      </div>
+      <div class="stat-card glow">
+        <h3>Goals Scored</h3>
+        <h2>89</h2>
+      </div>
+      <div class="stat-card glow">
+        <h3>Assists</h3>
+        <h2>112</h2>
+      </div>
+      <div class="stat-card glow">
+        <h3>Pass Accuracy</h3>
+        <h2>92%</h2>
+      </div>
+    </div>
+
+    <div class="skill-bars">
+      <h2>Player Attributes</h2>
+      <div class="skill-bar">
+        <div class="skill-name">Speed</div>
+        <div class="progress">
+          <div class="progress-bar" style="--width: 90%"></div>
+        </div>
+      </div>
+      <div class="skill-bar">
+        <div class="skill-name">Ball Control</div>
+        <div class="progress">
+          <div class="progress-bar" style="--width: 95%"></div>
+        </div>
+      </div>
+      <div class="skill-bar">
+        <div class="skill-name">Vision</div>
+        <div class="progress">
+          <div class="progress-bar" style="--width: 88%"></div>
+        </div>
+      </div>
+      <div class="skill-bar">
+        <div class="skill-name">Shooting</div>
+        <div class="progress">
+          <div class="progress-bar" style="--width: 85%"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="achievements">
+      <div class="achievement-card">
+        <h3>League Champion</h3>
+        <p>2024/25 Season</p>
+      </div>
+      <div class="achievement-card">
+        <h3>Golden Boot</h3>
+        <p>32 Goals in 2023/24</p>
+      </div>
+      <div class="achievement-card">
+        <h3>National Team</h3>
+        <p>45 Caps</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+<!DOCTYPE html>
+<html dir="rtl">
+<head>
+  <style>
+    /* Previous styles remain the same */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #0a192f, #112240);
+      color: #fff;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    /* New Media Gallery Styles */
+    .media-section {
+      margin: 3rem 0;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 20px;
+      padding: 2rem;
+    }
+
+    .media-tabs {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 2rem;
+      border-bottom: 2px solid rgba(0, 180, 216, 0.3);
+      padding-bottom: 1rem;
+    }
+
+    .tab-button {
+      background: rgba(0, 180, 216, 0.1);
+      border: 1px solid rgba(0, 180, 216, 0.3);
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .tab-button:hover {
+      background: rgba(0, 180, 216, 0.2);
+    }
+
+    .tab-button.active {
+      background: rgba(0, 180, 216, 0.3);
+      border-color: #00b4d8;
+    }
+
+    .media-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .media-card {
+      background: rgba(0, 180, 216, 0.1);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+      border: 1px solid rgba(0, 180, 216, 0.2);
+    }
+
+    .media-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .media-thumbnail {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .media-info {
+      padding: 1rem;
+    }
+
+    .skills-gallery {
+      margin-top: 2rem;
+    }
+
+    .skill-category {
+      margin-bottom: 2rem;
+    }
+
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+      height: 0;
+      overflow: hidden;
+      border-radius: 12px;
+      margin-bottom: 1rem;
+    }
+
+    .skill-details {
+      background: rgba(0, 180, 216, 0.05);
+      padding: 1rem;
+      border-radius: 8px;
+      margin-top: 1rem;
+    }
+
+    /* Animation for cards */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .media-card {
+      animation: fadeIn 0.5s ease forwards;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Previous content remains -->
+
+    <div class="media-section">
+      <h2>معرض المهارات والإنجازات</h2>
+      
+      <div class="media-tabs">
+        <button class="tab-button active">جميع المهارات</button>
+        <button class="tab-button">المراوغة</button>
+        <button class="tab-button">التسديد</button>
+        <button class="tab-button">التمرير</button>
+        <button class="tab-button">الأهداف</button>
+      </div>
+
+      <div class="skills-gallery">
+        <div class="skill-category">
+          <h3>مهارات المراوغة</h3>
+          <div class="media-grid">
+            <div class="media-card">
+              <img src="/api/placeholder/250/200" alt="مراوغة" class="media-thumbnail">
+              <div class="media-info">
+                <h4>مراوغة ضد الهلال</h4>
+                <p>دوري المحترفين 2024</p>
+              </div>
+            </div>
+            <div class="media-card">
+              <img src="/api/placeholder/250/200" alt="مهارة" class="media-thumbnail">
+              <div class="media-info">
+                <h4>مهارة فردية</h4>
+                <p>كأس الملك 2024</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3>أهداف مميزة</h3>
+          <div class="media-grid">
+            <div class="media-card">
+              <img src="/api/placeholder/250/200" alt="هدف" class="media-thumbnail">
+              <div class="media-info">
+                <h4>هدف من مسافة بعيدة</h4>
+                <p>الجولة 15 - الدوري</p>
+              </div>
+            </div>
+            <div class="media-card">
+              <img src="/api/placeholder/250/200" alt="هدف حاسم" class="media-thumbnail">
+              <div class="media-info">
+                <h4>هدف الفوز</h4>
+                <p>نهائي كأس الملك</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3>تمريرات حاسمة</h3>
+          <div class="media-grid">
+            <div class="media-card">
+              <img src="/api/placeholder/250/200" alt="تمريرة" class="media-thumbnail">
+              <div class="media-info">
+                <h4>تمريرة حاسمة</h4>
+                <p>مباراة القمة</p>
+              </div>
+            </div>
+            <div class="media-card">
+              <img src="/api/placeholder/250/200" alt="صناعة هدف" class="media-thumbnail">
+              <div class="media-info">
+                <h4>صناعة الهدف الحاسم</h4>
+                <p>الجولة 20 - الدوري</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
